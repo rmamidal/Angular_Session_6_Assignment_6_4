@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-wrap">
+                <h1>My Binding Application</h1>
+                <form role="form">
+                    <!-- First Name TextBox with Two-way Binding-->
+                    <div class="form-group">
+                        {{firstName}} <br/>
+                        <label for="firstName">First Name</label>
+                        <input type="text" [(ngModel)]="firstName" name="firstName" class="form-control" placeholder="FirstName" #first>
+                    </div>
+                    <!-- Last Name TextBox with Two-way Binding-->
+                    <div class="form-group">
+                        {{lastName}} <br/>
+                        <label for="lastName">Last Name</label>
+                        <input type="text" [(ngModel)]="lastName" name="lastName" class="form-control" placeholder="LastName" #last>
+                    </div>
+                    <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Create Title" (click)="createTitle(first.value,last.value)">
+                </form>
+                <hr/>
+                <div class="form-group">
+                    {{title}}
+                </div>
+            </div>
+        </div>
+        <!-- /.col-xs-12 -->
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
