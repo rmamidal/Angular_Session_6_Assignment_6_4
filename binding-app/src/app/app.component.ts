@@ -1,6 +1,5 @@
 // Importing component and OnInit modules
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, } from '@angular/core';
 // Component Decorator
 @Component({
   selector: 'app-root',
@@ -13,6 +12,7 @@ export class AppComponent implements OnInit {
   firstName: string;
   lastName: string;
   title: string;
+  submitted: boolean = false;
 
   ngOnInit() {
     /** Assign values to the variable after OnInit */
@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
 
   // Function to create title and bind to title.
   createTitle (first, last) {
-    this.title = `User Added with First Name "${first}" and Last Name "${last}"`;
+    this.submitted = true;
+    this.title = `First Name: "${first}" and Last Name: "${last}"`;
   }
 }

@@ -22,6 +22,10 @@
                 <div class="form-group">
                     {{title}}
                 </div>
+                <!-- Imported Child component-->
+                <div class="form-group" *ngIf="submitted">
+                <child-app [title]="title"></child-app>
+                </div>
             </div>
         </div>
         <!-- /.col-xs-12 -->
